@@ -26,7 +26,9 @@ def apply_coupons(cart, coupons)
       if name == coupon[:item] && info[:count] >= coupon[:num]
         info[:count] -= coupon[:num]
         if !cart[name + " W/COUPON"]
-          cart[name + " W/COUPON"] = Hash.new
+          cart[name + " W/COUPON"] = {
+            
+          }
         end
         cart[name + " W/COUPON"] 
       end
