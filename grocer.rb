@@ -25,14 +25,15 @@ def apply_coupons(cart, coupons)
     cart.each do |name, info|
       if name == coupon[:item] && info[:count] >= coupon[:num]
         info[:count] -= coupon[:num]
-        if !cart[name + " W/COUPON"]
-          cart[name + " W/COUPON"] = {
+        new_name = name + " W/COUPON"
+        if !cart[new_name]
+          cart[new_name] = {
             :price => coupon[:cost],
             :clearance => info[:clearance],
             :count => 1
           }
         else
-          cart[name + " W/COUPON"][:count] += 1
+          cart[new_name][:count] += 1
         end
          
       end
