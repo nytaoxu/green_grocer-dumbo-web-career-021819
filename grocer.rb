@@ -21,7 +21,7 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
-  result = {}
+  result = Hash.new
   coupons.each do |coupon|
     cart.each do |name, info|
       result[name] = info
