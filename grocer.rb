@@ -21,6 +21,9 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
+  if coupons.length == 0
+    return cart
+  end
   result = Hash.new
   coupons.each do |coupon|
     cart.each do |name, info|
