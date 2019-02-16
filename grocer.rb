@@ -22,7 +22,9 @@ end
 def apply_coupons(cart, coupons)
   # code here
   coupons.each do |coupon|
-    cart.each do |
+    cart.each do |name, info|
+      
+    end
   end
 end
 
