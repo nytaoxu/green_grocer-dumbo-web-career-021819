@@ -28,7 +28,7 @@ def apply_coupons(cart, coupons)
         if !cart[name + " W/COUPON"]
           cart[name + " W/COUPON"] = {
             :price => coupon[:cost],
-            :clearance =>
+            :clearance => info[]
           }
         end
         cart[name + " W/COUPON"] 
