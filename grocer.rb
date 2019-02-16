@@ -37,7 +37,6 @@ def apply_coupons(cart, coupons)
         else
           result[new_name][:count] += 1
         end
-         
       end
     end
   end
