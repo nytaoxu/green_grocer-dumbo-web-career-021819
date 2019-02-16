@@ -25,7 +25,10 @@ def apply_coupons(cart, coupons)
     cart.each do |name, info|
       if name == coupon[:item] && info[:count] >= coupon[:num]
         info[:count] -= coupon[:num]
-        cart[]
+        if !cart[name + " W/COUPON"]
+          cart[name + " W/COUPON"] = Hash.new
+        end
+        cart[name + " W/COUPON"] 
       end
     end
   end
